@@ -161,3 +161,16 @@ cython_debug/
 
 # Node.js
 node_modules/
+
+## Editor directories nad files
+# IntelliJ IDEA IDEで生成されるプロジェクト構成や設定ファイルが保存されるディレクトリ
+.idea
+# Visual Studio Codeで生成される設定ファイルが保存されるディレクトリ
+.vscode
+# *.suo, *.ntvs*: Microsoft Visual Studioで生成されるソリューションやプロジェクトの設定ファイル
+*.suo
+*.ntvs*
+# Microsoft Visual Studioのソリューションファイルです。このファイルは、プロジェクトの構成や依存関係などの情報を含んでいます
+*.sln
+# ビルド中に生成される一時ファイルやログファイルなどのアーティファクトを除外するためのパターン
+*.sw?
