@@ -5,7 +5,7 @@ class Task(models.Model):
     # タスクのタイトル
     title = models.CharField(max_length =200)
     # タスクの詳細説明
-    description = models.TextField(brank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     # タスクが完了したかどうかを示すブールフィールド
     completed = models.BooleanField(default=False)
     # タスクの期限日
