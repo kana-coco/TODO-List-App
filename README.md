@@ -72,7 +72,7 @@ npm start
 ## フォルダ構成
 
 ---
-├backend
-│ ├my_dgango_project
-│ │ ├app_name
-├frontend
+├ backend
+│   ├ my_dgango_project
+│   │ ├ todolist
+├ frontend
