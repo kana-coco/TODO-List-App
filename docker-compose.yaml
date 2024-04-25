@@ -2,16 +2,23 @@ version: '3'
 
 services:
   backend:
-    build: ./backend
+    container_name: backend
+    image: backend
+    build: ./backend/my_django_project
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
+      - ./backend/my_django_project:/code
 
   frontend:
+    container_name: frontend
+    image: frontend
     build:
       context: ./frontend
+    command: npm start
     ports:
       - "3000:3000"
     volumes:
       - ./frontend:/app
+      - /app/node_modules

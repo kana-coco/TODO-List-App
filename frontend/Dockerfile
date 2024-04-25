@@ -1,5 +1,5 @@
 # ベースイメージを指定
-FROM node:14
+FROM node:18-alpine
 
 # コンテナ内の作業ディレクトリを設定
 WORKDIR /app
@@ -13,5 +13,3 @@ RUN npm install
 # ポート番号を公開
 EXPOSE 3000
 
-# Reactアプリケーションをビルドして実行
-CMD ["npm", "start"]
