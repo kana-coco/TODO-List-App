@@ -16,9 +16,9 @@ services:
     image: frontend
     build:
       context: ./frontend
+      dockerfile: todo-react-app/Dockerfile
     command: npm start
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
-      - /app/node_modules
+      - ./frontend/todo-react-app:/app
