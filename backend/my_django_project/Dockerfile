@@ -13,6 +13,9 @@ COPY . .
 # Pythonの依存関係をインストール
 RUN pip install --no-cache-dir -r requirements.txt
 
+# corsheadersをインストール
+RUN pip install django-cors-headers
+
 # ポート番号を公開
 EXPOSE 8000
 
