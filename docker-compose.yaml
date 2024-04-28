@@ -22,3 +22,11 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend/todo-react-app:/app
+
+  db:
+    image: sqlite:latest
+    volumes:
+      - ./todolist/data:/var/lib/sqlite
+      - ./init.sql:docker-entrypoint-initdb.d/init.sql
+    environment:
+      - sqlite_ROOT_PASSWORD=root
