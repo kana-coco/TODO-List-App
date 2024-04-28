@@ -1,9 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from rest_framework import viewsets
+from .serializers import TaskSerializer, UserSerializer
+from models import task
 
-def task_list(request):
-    # ToDo一覧を表示するロジック
-    return HttpResponse("Task List")
-
-def task_create(request):
-    # ToDo作成ページを表示するロジック
-    return HttpResponse("New Task")
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = task.objects.all()
+    serializer_class = TaskSerializer

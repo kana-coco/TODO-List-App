@@ -1,10 +1,14 @@
-from django.urls import path
-from . import views # viewsモジュールをインポート
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework import routers
+from todolist.views import TaskViewSet
 
 app_name = 'todolist' # アプリケーション名
 
+router = routers.DefaultRouter()
+router.register(r'tasks', TaskViewSet)
+
 urlpatterns = [
-    path('', views.task_list, name='task_list'), # トップページのビューを指定
-    path('tasks/create/', views.task_create, name='task_create'), # 新規作成ページのビューを指定
-    # 他のURLパターンもここに追加
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]
