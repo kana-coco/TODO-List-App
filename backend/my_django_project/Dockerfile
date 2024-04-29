@@ -13,11 +13,6 @@ COPY . .
 # Pythonの依存関係をインストール
 RUN pip install --no-cache-dir -r requirements.txt
 
-# corsheadersをインストール
-RUN pip install django-cors-headers
-
-RUN pip install djangorestframework
-
 # # マイグレーションを実行
 # RUN python manage.py migrate
 
