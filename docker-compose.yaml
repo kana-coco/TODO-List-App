@@ -15,7 +15,7 @@ services:
     container_name: frontend
     image: frontend
     build:
-      context: ./frontend
+      context: frontend
       dockerfile: todo-react-app/Dockerfile
     command: npm start
     ports:
@@ -23,10 +23,10 @@ services:
     volumes:
       - ./frontend/todo-react-app:/app
 
-  db:
-    image: sqlite:latest
-    volumes:
-      - ./todolist/data:/var/lib/sqlite
-      - ./init.sql:docker-entrypoint-initdb.d/init.sql
-    environment:
-      - sqlite_ROOT_PASSWORD=root
+  # db:
+  #   image: sqlite:latest
+  #   volumes:
+  #     - ./todolist/data:/var/lib/sqlite
+  #     - ./init.sql:docker-entrypoint-initdb.d/init.sql
+  #   environment:
+  #     - sqlite_ROOT_PASSWORD=root

@@ -16,6 +16,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # corsheadersをインストール
 RUN pip install django-cors-headers
 
+RUN pip install djangorestframework
+
+# # マイグレーションを実行
+# RUN python manage.py migrate
+
 # ポート番号を公開
 EXPOSE 8000
 

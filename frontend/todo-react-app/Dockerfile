@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # ホストのtodo-react-appディレクトリにあるすべてのファイルをコンテナの作業ディレクトリにコピー
-COPY . .
+COPY todo-react-app/ .
 
 # npmの依存関係をインストール
 RUN npm install
