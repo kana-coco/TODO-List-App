@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from todolist.views import TaskViewSet
+from .views import TaskViewSet
 
 app_name = 'todolist' # アプリケーション名
 

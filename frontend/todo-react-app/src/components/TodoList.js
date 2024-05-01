@@ -1,10 +1,18 @@
-import React from 'react';
+import React from "react";
+import Todo from "./Todo";
+import axios from "axios";
 
-const TodoList = ({ todos }) => {
-    return (
-        <ul>{todos.map((todo) => (<li key={todo.id}>{todo.title}</li>))}
-        </ul>
-    );
-};
+const TodoList = ({ todos, onToggleTodo, onDeleteTodo }) => (
+  <ul>
+    {todos.map((todo) => (
+      <Todo
+        key={todo.id}
+        todo={todo}
+        onToggleTodo={onToggleTodo}
+        onDeleteTodo={onDeleteTodo}
+      />
+    ))}
+  </ul>
+);
 
 export default TodoList;
