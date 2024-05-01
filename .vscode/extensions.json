@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "GitHub.copilot",
+    "eamodio.gitlens",
+    "oderwat.indent-rainbow",
+    "ms-azuretools.vscode-docker",
+    "Gruntfuggly.todo-tree"
+  ]
+}
