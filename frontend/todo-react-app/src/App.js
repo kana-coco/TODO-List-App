@@ -1,11 +1,27 @@
 import React from "react";
-import TaskList from "./components/TaskList";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import TaskMainList from "./pages/TaskMainList";
 
-const App = () => (
-  <div>
-    <h1>Taskリスト</h1>
-    <TaskList />
-  </div>
-);
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/">
+            <TaskMainList />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
