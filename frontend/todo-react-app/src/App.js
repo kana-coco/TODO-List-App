@@ -1,10 +1,10 @@
 import React from "react";
-import TodoList from "./components/TodoList";
+import TaskList from "./components/TaskList";
 
 const App = () => (
   <div>
-    <h1>ToDoリスト</h1>
-    <TodoList />
+    <h1>Taskリスト</h1>
+    <TaskList />
   </div>
 );
 
