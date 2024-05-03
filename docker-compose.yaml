@@ -1,17 +1,35 @@
-version: '3'
+version: "3"
 
 services:
   backend:
-    build: ./backend
+    container_name: backend
+    image: backend
+    build: ./backend/my_django_project
+    command: python manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
+      - ./backend/my_django_project:/code
 
   frontend:
-    build:
-      context: ./frontend
+    container_name: frontend
+    image: frontend
+    build: ./frontend/todo-react-app
+    command: npm start
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./frontend/todo-react-app:/app
+
+  # db:
+  #   container_name: db
+  #   image: sqlite:latest
+  #   build:
+  #   ports:
+  #     - 5432:5432
+  #   volumes:
+  #     - ./todolist/data:/var/lib/sqlite
+  #     - ./init.sql:docker-entrypoint-initdb.d/init.sql
+  #   environment:
+  #     - sqlite_USER =root
+  #     - sqlite_ROOT_PASSWORD=root

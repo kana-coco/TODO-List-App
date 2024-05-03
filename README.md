@@ -69,3 +69,10 @@ npm start
 
 このプロジェクトは MIT ライセンスの下で公開されています。詳細については、[LICENSE](LICENSE) ファイルを参照してください。
 
+## フォルダ構成
+
+---
+├ backend
+│   ├ my_dgango_project
+│   │ ├ todolist
+├ frontend
