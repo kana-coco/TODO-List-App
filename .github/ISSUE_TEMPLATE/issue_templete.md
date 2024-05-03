@@ -1,10 +1,6 @@
 ---
 name: サンプルテンプレート
 about: 基本issueサンプル
-title: ''
-labels: ''
-assignees: ''
-milestone: ''
 ---
 
 ## 概要
