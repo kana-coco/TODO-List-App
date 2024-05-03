@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TaskMainList from "./pages/TaskMainList";
 
 const App = () => {
@@ -14,11 +14,11 @@ const App = () => {
           </ul>
         </nav>
 
-        <Switch>
+        <routes>
           <Route path="/">
             <TaskMainList />
           </Route>
-        </Switch>
+        </routes>
       </div>
     </Router>
   );
