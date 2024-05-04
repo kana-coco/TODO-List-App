@@ -7,31 +7,49 @@
     "XXX",
     "[ ]",
     "[x]"
-  ],
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
+  ], // TODO Treeのタグを設定
+  "editor.tabSize": 2, // タブのサイズを2にする
+  "editor.formatOnSave": true, // 保存時に自動でフォーマット
+  "python.linting.enabled": true, // PythonのLintを有効にする(autoPEP8)
+  "python.linting.pylintEnabled": true, // PythonのLintを有効にする(Pylint)
+  "python.linting.flake8Enabled": true, // PythonのLintを有効にする(Flake8)
+  "python.formatting.provider": "black", // Pythonのフォーマットをblackにする(Black)
+  "eslint.alwaysShowStatus": true, // ESLintのステータスを常に表示
+  "javascript.validate.enable": false, // JavaScriptの構文チェックを無効にする(ESLintとの構文チェックの重複を避けるため)
+  "typescript.validate.enable": false, // TypeScriptの構文チェックを無効にする(ESLintとの構文チェックの重複を避けるため)
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  }, // ESLintの対象ファイルを拡張子で指定
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }, // 保存時にESLintで自動修正
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }, // JavaScriptのEmmetを有効にする
+  "material-icon-theme.activeIconPack": "react_redux", // アイコンテーマをReact/Reduxにする
+  "material-icon-theme.hidesExplorerArrows": true, // エクスプローラーの矢印を非表示にする
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // JavaScriptのフォーマットをPrettierにする
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
+  }, // TypeScriptのフォーマットをPrettierにする
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // JSONのフォーマットをPrettierにする
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // HTMLのフォーマットをPrettierにする
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // CSSのフォーマットをPrettierにする
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // SCSSのフォーマットをPrettierにする
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }, // YAMLのフォーマットをPrettierにする
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  } // VueのフォーマットをPrettierにする
 }

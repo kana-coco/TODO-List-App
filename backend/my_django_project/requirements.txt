@@ -1,3 +1,6 @@
 Django==3.2.9
 django-cors-headers
 djangorestframework
+flake8
+pylint
+black

@@ -1,11 +1,16 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "GitHub.copilot",
-    "eamodio.gitlens",
-    "oderwat.indent-rainbow",
-    "ms-azuretools.vscode-docker",
-    "Gruntfuggly.todo-tree"
+    "ms-python.python", // Pythonの拡張機能
+    "ms-python.black-formatter", // Pythonのフォーマッター
+    "batistamatt.django-html", // DjangoのHTMLテンプレートのシンタックスハイライト
+    "batistamatt.django-html-templates", // DjangoのHTMLテンプレートのシンタックスハイライト
+    "esbenp.prettier-vscode", // Prettier
+    "dbaeumer.vscode-eslint", // ESLint
+    "GitHub.copilot", // GitHub Copilot
+    "eamodio.gitlens", // GitLens
+    "oderwat.indent-rainbow", // インデントのレインボーカラー
+    "ms-azuretools.vscode-docker", // Docker
+    "Gruntfuggly.todo-tree", // TODO Tree
+    "pkief.material-icon-theme" // Material Icon Theme
   ]
 }
