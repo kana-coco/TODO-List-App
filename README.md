@@ -1,12 +1,12 @@
 # TODO-List-App
-Simple TODO list web application built with Python (Django) for the backend and JavaScript (React) for the frontend  
+Simple TODO list web application built with Python (Django) for the backend and JavaScript (React) for the frontend
 TODOリストアプリは、タスクを管理し、効率的に作業を行うためのシンプルなウェブアプリケーションです。
 
 ## 概要
 * プロジェクト名：TODOリスト
-* プロジェクトの概要：  
-  このアプリケーションは、ユーザーがToDoリストを作成し、タスクを追加、削除、完了することができます。  
-  ユーザーは自分のタスクを簡単に管理し、優先順位を設定することができます。  
+* プロジェクトの概要：
+  このアプリケーションは、ユーザーがToDoリストを作成し、タスクを追加、削除、完了することができます。
+  ユーザーは自分のタスクを簡単に管理し、優先順位を設定することができます。
 
 
 ## 使用技術一覧
@@ -71,8 +71,156 @@ npm start
 
 ## フォルダ構成
 
----
-├ backend
-│   ├ my_dgango_project
-│   │ ├ todolist
-├ frontend
+```
+.
+├── backend
+│   └── my_django_project
+│       ├── my_django_project
+│       └── todolist
+│           ├── migrations
+│           └── serializers
+└── frontend
+    └── todo-react-app
+        ├── public
+        ├── src
+        │   ├── assets
+        │   │   └── icons
+        │   ├── components
+        │   │   └── shared
+        │   ├── constants
+        │   ├── pages
+        │   └── styles
+        └── tests
+            └── unit
+```
+
+## 機能要件
+※　実装済みの機能はチェック
+### Authentication
+
+- [ ] User sign up with email and password
+- [ ] User sign in with email and password
+- [ ] Password reset functionality
+- [ ] Social sign in (Google, Facebook, etc.)
+
+### ToDo List Management
+
+- [x] Create a new todo item
+- [ ] Edit an existing todo item
+- [ ] Mark a todo item as complete
+- [ ] Delete a todo item
+- [ ] View all todo items
+- [ ] View completed todo items
+- [ ] View incomplete todo items
+
+### Filtering and Sorting
+
+- [ ] Filter todo items by status (complete, incomplete)
+- [ ] Filter todo items by due date
+- [ ] Sort todo items by priority, due date, or creation date
+
+### Reminders and Notifications
+
+- [ ] Set due dates for todo items
+- [ ] Receive reminders for upcoming due dates
+- [ ] Receive notifications for overdue items
+
+### Collaboration (Optional)
+
+- [ ] Share todo lists with other users
+- [ ] Assign todo items to other users
+- [ ] Comments on todo items
+
+### User Interface
+
+- [x] Responsive design for mobile and desktop
+- [ ] Light and dark mode
+- [ ] Drag and drop to reorder todo items
+
+### Data Persistence
+
+- [ ] Store todo data in a database or local storage
+
+### Extras
+
+- [ ] Export todo data to CSV or other formats
+- [ ] Import todo data from CSV or other formats
+- [ ] Attach files or images to todo items
+
+## コーディング規約、命名規則
+### Python (Django)
+
+- Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide
+- Use `snake_case` for function and variable names
+- Use `UpperCamelCase` for class names
+- Keep line length under 79 characters
+- Use 4 spaces for indentation
+- Import ordering:
+  1. Standard library imports
+  2. Third-party imports
+  3. Local imports
+
+### JavaScript (React)
+
+- Follow [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- Use `camelCase` for function and variable names
+- Use `PascalCase` for component names and file names
+- Keep line length under 100 characters
+- Use 2 spaces for indentation
+- Import ordering:
+  1. Standard library imports
+  2. Third-party imports
+  3. Local imports
+  4. Component imports
+
+### CSS/SCSS
+
+- Use `kebab-case` for class names
+- Follow [BEM](http://getbem.com/) naming convention
+- Prefer component-scoped stylesheets
+- Use `rem` units for font sizes, `em` for margins/paddings
+
+## アプリケーションアーキテクチャ
+```
+todo_project/
+├── backend/
+│   ├── todo_project/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── asgi.py
+│   │   └── wsgi.py
+│   ├── todos/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── permissions.py
+│   │   └── urls.py
+│   ├── users/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   └── urls.py
+│   ├── notifications/
+│   │   ├── __init__.py 
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   └── tasks.py
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── store/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── package-lock.json
+└── README.md
+```
