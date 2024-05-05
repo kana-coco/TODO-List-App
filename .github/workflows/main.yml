@@ -1,0 +1,24 @@
+name: Docker Compose Workfloow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  build-and-start:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.marged)
+    runs-on: ubuntu-latest
+
+    steps:
+    -   uses: actions/checkout@v2
+    -   name: Build and start Docker Compose
+        run: |
+          docker-compose -f docker-compose.ymal build
+          dokcer-compose -f docker-compose.yaml up -d
+
+TODO: ビルド→テスト→Dockerコンテナを起動のワークフローを作成する
