@@ -1,4 +1,4 @@
-name: Docker Compose Workfloow
+name: Docker Compose Workflow
 
 on:
   push:
@@ -10,15 +10,15 @@ on:
     types: [closed]
 
 jobs:
+
   build-and-start:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.marged)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged)
     runs-on: ubuntu-latest
 
     steps:
-    -   uses: actions/checkout@v2
-    -   name: Build and start Docker Compose
-        run: |
-          docker-compose -f docker-compose.ymal build
-          dokcer-compose -f docker-compose.yaml up -d
+    - uses: actions/checkout@v2
 
-TODO: ビルド→テスト→Dockerコンテナを起動のワークフローを作成する
+    - name: Build and start Docker Compose
+      run: |
+        docker-compose -f docker-compose.yml build
+        docker-compose -f docker-compose.yml up -d
