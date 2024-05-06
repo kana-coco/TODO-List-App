@@ -20,7 +20,7 @@ const TaskMainList = () => {
 
   return (
     <div>
-      <h1>タスク一覧</h1>
+      <h1>ToDoリスト</h1>
       <AddTask />
       <TaskList tasks={tasks} />
     </div>
